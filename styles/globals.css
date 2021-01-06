@@ -1,3 +1,33 @@
+@font-face {
+  font-family: Proximia-Regular;
+  src: url("./fonts/proxima/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+  font-family: Proximia-Light;
+  src: url("./fonts/proxima/ProximaNova-Light.ttf");
+}
+
+@font-face {
+  font-family: Proximia-SBold;
+  src: url("./fonts/proxima/ProximaNova-Semibold.ttf");
+}
+
+@font-face {
+  font-family: Geometria-Regular;
+  src: url("./fonts/geometria/Geometria.ttf");
+}
+
+@font-face {
+  font-family: Geometria-Bold;
+  src: url("./fonts/geometria/Geometria-Bold.ttf");
+}
+
+@font-face {
+  font-family: Geometria-Medium;
+  src: url("./fonts/geometria/Geometria-Medium.ttf");
+}
+
 html,
 body {
   padding: 0;
