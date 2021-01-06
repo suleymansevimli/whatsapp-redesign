@@ -1,0 +1,34 @@
+.button {
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--green);
+    outline: none;
+    padding: 12px 91px;
+    border-radius: 20px;
+}
+
+.button {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.button:hover {
+    background: var(--green-hover) radial-gradient(circle, transparent 1%,var(--green)  1%) center/15000%;
+}
+.button:active {
+    background-color: var(--green);
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.button:disabled,
+.button[disabled] {
+    background-color: var(--green-disabled);
+}
+
+.button[disabled]:hover {
+    background-color: var(--green-disabled);
+}
+

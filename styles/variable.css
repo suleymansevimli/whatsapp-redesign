@@ -1,5 +1,7 @@
 :root {
-    --green: #1EBE71;
+    --green: #1ebe71;
+    --green-hover: #40d488;
+    --green-disabled: #5fb388;
     --black: #000000;
     --white: #ffffff;
     --milk-white: #FCFCFC;
