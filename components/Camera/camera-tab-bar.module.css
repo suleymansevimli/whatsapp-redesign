@@ -1,0 +1,59 @@
+.container {
+    width: 100%;
+    background-color: var(--gray);
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .lastImage {
+        cursor: pointer;
+        img {
+            border: 3px solid var(--white);
+        }
+    }
+
+    .takePhoto {
+        cursor: pointer;
+        .coverCircle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 65px;
+            width: 65px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            transition: 300ms border-color;
+
+            .takeButton {
+                padding:15px;
+                height: 47px;
+                width: 47px;
+                border-radius: 50%;
+                background-color: var(--red);
+            }
+        }
+
+        &:hover {
+            .coverCircle {
+                border-color: var(--red);
+            }
+        }
+    }
+
+    .reverseCamera {
+        cursor: pointer;
+        svg {
+            font-size: 28px;
+            color: var(--white);
+            transition: 300ms color;
+        }
+
+        &:hover {
+            svg {
+                color: var(--green)
+            }
+        }
+    }
+
+}
