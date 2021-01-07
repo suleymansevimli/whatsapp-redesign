@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import style from './user-information.module.css'
 import {Pending, SingleTick, Status, Tick} from "../icons";
 
-const UserInformation = ({message}) => {
+const UserInformation = ({user, lastMessage, unreadMessageCount, lastMessageTime, type, status}) => {
 
     const RenderType = () => {
-        if (message.type === "received") {
-            return <p className={style.notify}>{message.unreadMessageCount} </p>
+        if (type === "received") {
+            return <p className={style.notify}>{unreadMessageCount} </p>
         }
 
-        switch (message.status) {
+        switch (status) {
             case "pending":
                 return (
                     <p><Pending/></p>
@@ -35,15 +35,15 @@ const UserInformation = ({message}) => {
         <div className={style.container}>
             <div className={style.information}>
                 <div className={style.avatar}>
-                    <img width={55} height={55} src={message.user.avatar} alt="user avatar"/>
+                    <img width={55} height={55} src={user.avatar} alt="user avatar"/>
                 </div>
                 <div className={style.content}>
-                    <h4 className={style.name}>{message.user.name}</h4>
-                    <p className={style.lastMessage}>{message.lastMessage}</p>
+                    <h4 className={style.name}>{user.name}</h4>
+                    <p className={style.lastMessage}>{lastMessage}</p>
                 </div>
             </div>
             <div className={style.otherInfo}>
-                <p className={style.lastMessageTime}>{message.lastMessageTime}</p>
+                <p className={style.lastMessageTime}>{lastMessageTime}</p>
                 <RenderType/>
             </div>
 
@@ -54,19 +54,10 @@ const UserInformation = ({message}) => {
 export default UserInformation;
 
 UserInformation.propTypes = {
-    message : PropTypes.object.isRequired
-}
-
-UserInformation.defaultProps = {
-    message: {
-        user : {
-            avatar: "http://localhost:3000/img/avatar.png",
-            name: "Joe Doe"
-        },
-        lastMessage: "Hey! Are you okey ?",
-        unreadMessageCount: 2,
-        lastMessageTime: "13:45",
-        type: "received",
-        status: "read"
-    }
+    user:PropTypes.object.isRequired,
+    lastMessage:PropTypes.string.isRequired,
+    unreadMessageCount:PropTypes.number.isRequired,
+    lastMessageTime:PropTypes.string.isRequired,
+    type:PropTypes.oneOf(["sent","received"]),
+    status:PropTypes.oneOf(["pending","read","delivered","notDelivered"])
 }

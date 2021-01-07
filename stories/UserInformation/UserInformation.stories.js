@@ -3,7 +3,34 @@ import UserInformationComp from "../../components/UserInformation/UserInformatio
 
 export default {
     title: "Components/UserInformation",
-    component: UserInformationComp
+    component: UserInformationComp,
+    argTypes: {
+        type: {
+            control: {
+                type: "select",
+                options: [
+                    'sent',
+                    'received'
+                ]
+            }
+        },
+        status: {
+            control: {
+                type: "select",
+                options: [
+                    'pending',
+                    'notDelivered',
+                    'delivered',
+                    'read'
+                ]
+            }
+        },
+        user : {
+            control: {
+                type: "object"
+            }
+        }
+    }
 }
 
 export const UserInformationReceived = (args) => {
@@ -11,21 +38,18 @@ export const UserInformationReceived = (args) => {
 }
 
 UserInformationReceived.args = {
-    message: {
-        user : {
-            avatar: "http://localhost:3000/img/avatar.png",
-            name: "Joe Doe"
-        },
-        lastMessage: "Hey! Are you okey ?",
-        unreadMessageCount: 2,
-        lastMessageTime: "13:45",
-        type: "received",
-        status: "read"
-    }
+
+    user: {
+        avatar: "http://localhost:3000/img/avatar.png",
+        name: "Joe Doe"
+    },
+    lastMessage: "Hey! Are you okey ?",
+    unreadMessageCount: 2,
+    lastMessageTime: "13:45",
+    type: "received",
+    status: "read"
+
 }
-
-
-
 
 
 export const SentUserInformationDelivered = (args) => {
@@ -33,19 +57,15 @@ export const SentUserInformationDelivered = (args) => {
 }
 
 SentUserInformationDelivered.args = {
-    message: {
-        user : {
-            avatar: "http://localhost:3000/img/avatar.png",
-            name: "Joe Doe"
-        },
-        lastMessage: "Yes you ?",
-        lastMessageTime: "13:46",
-        type: "sent",
-        status: "delivered"
-    }
+    user: {
+        avatar: "http://localhost:3000/img/avatar.png",
+        name: "Joe Doe"
+    },
+    lastMessage: "Yes you ?",
+    lastMessageTime: "13:46",
+    type: "sent",
+    status: "delivered"
 }
-
-
 
 
 export const SentUserInformationRead = (args) => {
@@ -53,16 +73,16 @@ export const SentUserInformationRead = (args) => {
 }
 
 SentUserInformationRead.args = {
-    message: {
-        user : {
-            avatar: "http://localhost:3000/img/avatar.png",
-            name: "Joe Doe"
-        },
-        lastMessage: "Yes you ?",
-        lastMessageTime: "13:46",
-        type: "sent",
-        status: "read"
-    }
+
+    user: {
+        avatar: "http://localhost:3000/img/avatar.png",
+        name: "Joe Doe"
+    },
+    lastMessage: "Yes you ?",
+    lastMessageTime: "13:46",
+    type: "sent",
+    status: "read"
+
 }
 
 export const SentUserInformationPending = (args) => {
@@ -70,15 +90,15 @@ export const SentUserInformationPending = (args) => {
 }
 
 SentUserInformationPending.args = {
-    message: {
-        user : {
-            avatar: "http://localhost:3000/img/avatar.png",
-            name: "Joe Doe"
-        },
-        lastMessage: "Yes you ?",
-        lastMessageTime: "13:46",
-        type: "sent",
-        status: "pending"
-    }
+
+    user: {
+        avatar: "http://localhost:3000/img/avatar.png",
+        name: "Joe Doe"
+    },
+    lastMessage: "Yes you ?",
+    lastMessageTime: "13:46",
+    type: "sent",
+    status: "pending"
+
 }
 
