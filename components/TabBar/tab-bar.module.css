@@ -1,0 +1,30 @@
+.container {
+    width: 375px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    grid-template-columns: repeat(auto-fill ,minmax(75px,1fr));
+
+    div {
+        svg {
+            cursor: pointer;
+            font-size: 25px;
+            //margin: 19px 38px;
+            color: #c6c6c6;
+
+            &:not(:first-child) {
+                //margin-left: 65px;
+            }
+        }
+    }
+
+    div.active {
+        svg {
+            color: var(--green);
+        }
+
+    }
+
+
+
+}
