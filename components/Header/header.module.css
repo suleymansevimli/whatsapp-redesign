@@ -1,0 +1,22 @@
+.container {
+    background-color: var(--milk-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 16px 25px 16px;
+
+    svg {
+        cursor: pointer;
+        font-size: 25px;
+        position: absolute;
+        left: 16px;
+        color: var(--gray);
+    }
+
+    .header {
+        font-family: Geometria-Regular;
+        font-size: 18px;
+        text-align: center;
+    }
+}
