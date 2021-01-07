@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    max-width: 295px;
+
+    .tab {
+        padding: 14px;
+        width: 95px;
+        height: 77px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            font-weight: bold;
+            color: var(--white);
+            font-size: 25px;
+        }
+
+        p {
+            text-align: center;
+            font-family: Proximia-Light;
+            color: var(--white);
+            margin-top: 6px;
+            font-size: 14px;
+        }
+    }
+
+    .divider {
+        border-left: 1px solid var(--light-gray);
+        opacity: 0.4;
+        height: 37px;
+        width: 1px;
+    }
+
+}
