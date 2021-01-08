@@ -1,13 +1,18 @@
 import React, {useState} from "react";
+React.useLayoutEffect = React.useEffect
 import InputMask from "react-input-mask";
 import style from '../../styles/mobile/index.module.css'
 import Layout from "../../components/Layout/Layout";
 import Button from "../../components/Button/Button";
+import {useRouter} from "next/router";
+import MobileLayout from "../../components/Layout/MobileLayout";
 
 const Home = () => {
 
     const [selectCountry, setCountry] = useState({id: 1, label: "Turkey", code: "+90", flag: "/img/flags/turkey.png"})
     const [toggleCountries, setCountries] = useState(false)
+
+    const router = useRouter()
 
     const Country = React.memo(() => {
 
@@ -54,14 +59,14 @@ const Home = () => {
     })
 
     const maskOptions = {
+        type:"tel",
         mask: " 999 999 9999",
-        maskChar: '-',
         alwaysShowMask: true,
         maskPlaceholder: "-"
     }
 
     return (
-        <Layout bgImage={"http://localhost:3000/img/background.png"}>
+        <MobileLayout bgImage={"http://localhost:3000/img/background.png"}>
             <div className={style.container}>
                 <div className={style.logo}>
                     <img src={"/img/logo.svg"} alt=""/>
@@ -73,11 +78,13 @@ const Home = () => {
 
                 <div className={style.maskPhone}>
                     <Country/>
-                    <InputMask {...maskOptions} className={style.input}/>
+                    <InputMask {...maskOptions} className={style.input} >
+                        <input/>
+                    </InputMask>
                 </div>
 
                 <div className={style.sendButton}>
-                    <Button>Send</Button>
+                    <Button onClick={()=>router.push("/mobile/verify-phone")}>Send</Button>
                 </div>
 
                 <div className={style.privacy}>
@@ -89,7 +96,7 @@ const Home = () => {
                     FACEBOOK
                 </div>
             </div>
-        </Layout>
+        </MobileLayout>
     )
 }
 
