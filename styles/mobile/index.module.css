@@ -1,0 +1,112 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        margin: 136px 129px 43px 129px;
+    }
+
+    .welcomeTitle {
+        h3 {
+            font-family: Geometria-Medium;
+            font-size: 24px;
+        }
+    }
+
+    .maskPhone {
+        max-width: 150px;
+        margin-top: 32px;
+        border-radius: 9px;
+        display: flex;
+        justify-content: space-around;
+        .input {
+            max-width: 187px;
+            display: flex;
+            justify-self: flex-end;
+            padding-left: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 5px;
+        }
+    }
+
+    .sendButton {
+        margin-top: 67px;
+    }
+
+    .privacy {
+        font-family: Geometria-Regular;
+        font-size: 14px;
+        margin: 127px 35px 52px 35px;
+        text-align: center;
+    }
+
+    .from {
+        font-family: Geometria-Medium;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+.selectContainer {
+    position: relative;
+    width: 72px;
+
+    .showCase {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .flag {
+            margin-top: 8px;
+            margin-right: 16px;
+            margin-bottom: 9px;
+            margin-left: 15px;
+        }
+
+        .code {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    .countries {
+        position: absolute;
+        top:35px;
+        left: 0;
+        width: 170px;
+        background: var(--light-gray);
+
+        div {
+            margin-top:15px;
+            img {
+                margin-left: 8px;
+            }
+            p {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .selectOption {
+        display: flex;
+
+        &:last-child {
+            margin-bottom: 5px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -14px;
+            left: 40px;
+            margin-left: -5px;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent transparent var(--gray) transparent;
+        }
+    }
+}
