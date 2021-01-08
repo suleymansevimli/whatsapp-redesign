@@ -6,14 +6,14 @@ const Layout = (props) => {
 
     let {width} = useWindowSize();
 
-    const LayoutGrid = ({children}) => {
+    const LayoutGrid = ({header,headerTitle,children,footer}) => {
         return (
             <div>
-                <div>Header</div>
+                {header && <div>{headerTitle}</div>}
                 <div>
                     {children}
                 </div>
-                <div>Footer</div>
+                {footer && <div>Footer</div>}
             </div>
         )
     }

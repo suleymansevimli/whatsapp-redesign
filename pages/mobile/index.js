@@ -26,9 +26,9 @@ const Home = () => {
         const RenderCountries = () => {
             return (
                 <div className={style.countries}>
-                    {countries.map((e,i)=>{
+                    {countries.map((e, i) => {
                         return (
-                            <div className={style.selectOption} onClick={()=>changeCountry(e)}>
+                            <div key={i} className={style.selectOption} onClick={() => changeCountry(e)}>
                                 <img src={e.flag} alt=""/>
                                 <p>{e.label}</p>
                             </div>
@@ -72,8 +72,8 @@ const Home = () => {
                 </div>
 
                 <div className={style.maskPhone}>
-                       <Country/>
-                       <InputMask {...maskOptions} className={style.input}/>
+                    <Country/>
+                    <InputMask {...maskOptions} className={style.input}/>
                 </div>
 
                 <div className={style.sendButton}>
