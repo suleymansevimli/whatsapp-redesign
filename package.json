@@ -11,6 +11,7 @@
     "icon": "svgr icons -d components/icons --icon --replace-attr-values \"#fff=currentColor\",\"#1E98BE=currentColor\",\"#C4C4C4=currentColor\",\"#808080=currentColor\",\"#C6C6C6=currentColor\",\"#BEBEBE=currentColor\" "
   },
   "dependencies": {
+    "@sandstreamdev/react-swipeable-list": "^1.0.0",
     "classnames": "^2.2.6",
     "next": "10.0.4",
     "react": "17.0.1",
