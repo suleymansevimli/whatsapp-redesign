@@ -13,7 +13,9 @@ const MobileLayout = ({header,headerTitle,children,tabBar,bgImage}) => {
                 {children}
             </div>
 
-            {tabBar && <TabBar/>}
+            {tabBar && <div className={style.tabBar}>
+                <TabBar/>
+            </div>}
         </div>
     )
 }

@@ -1,4 +1,10 @@
 .container {
     height: 100%;
+
+    .tabBar {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
 }
 

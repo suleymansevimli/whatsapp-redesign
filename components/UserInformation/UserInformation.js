@@ -56,7 +56,7 @@ export default UserInformation;
 UserInformation.propTypes = {
     user:PropTypes.object.isRequired,
     lastMessage:PropTypes.string.isRequired,
-    unreadMessageCount:PropTypes.number.isRequired,
+    unreadMessageCount:PropTypes.number,
     lastMessageTime:PropTypes.string.isRequired,
     type:PropTypes.oneOf(["sent","received"]),
     status:PropTypes.oneOf(["pending","read","delivered","notDelivered"])

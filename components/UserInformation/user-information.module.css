@@ -1,7 +1,7 @@
 .container {
     background-color: var(--white);
     padding: 5px 7px;
-    width: 341px;
+    width: 100%;
     cursor: pointer;
     display: flex;
     flex-direction: row;
