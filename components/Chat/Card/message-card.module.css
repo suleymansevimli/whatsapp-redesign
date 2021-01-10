@@ -1,7 +1,7 @@
 .container {
     position: relative;
     display: flex;
-    max-width: 275px;
+    max-width: 350px;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 10px;

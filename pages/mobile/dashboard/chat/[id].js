@@ -22,13 +22,18 @@ const Chat = () => {
                       backAction={()=>backAction()}
                       footer={<Input/>} >
             <div className={style.container}>
-                <MessageCard type={"sent"} status={"pending"}>
+                <MessageCard type={"sent"} status={"read"}>
                     Başkanım önemli bir durum var.
                 </MessageCard>
 
                 <MessageCard type={"received"}>
                     Merhaba
                 </MessageCard>
+
+                <MessageCard
+                    type={"sent"}
+                    status={"delivered"}
+                    media={"audio"} src={"/"}/>
             </div>
         </MobileLayout>
     )

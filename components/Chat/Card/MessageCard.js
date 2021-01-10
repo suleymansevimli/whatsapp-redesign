@@ -3,9 +3,17 @@ import PropTypes from 'prop-types'
 import cn from 'classnames'
 import style from './message-card.module.css'
 import {Pending, SingleTick, Tick} from "../../icons";
+import Audio from "../Media/Audio";
 
-const MessageCard = ({type, children,status}) => {
+const MessageCard = ({type, children, status, media}) => {
 
+
+    const RenderMedia = () => {
+        switch (media) {
+            case "audio":
+                return <Audio/>
+        }
+    }
 
     const RenderStatus = () => {
         switch (status) {
@@ -19,11 +27,11 @@ const MessageCard = ({type, children,status}) => {
                 )
             case "delivered":
                 return (
-                    <p> <Tick/> </p>
+                    <p><Tick/></p>
                 )
             case "read":
                 return (
-                    <p><Tick style={{color:"#1E98BE"}}/></p>
+                    <p><Tick style={{color: "#1E98BE"}}/></p>
                 )
         }
     }
@@ -31,11 +39,11 @@ const MessageCard = ({type, children,status}) => {
     return (
         <div className={cn([style.container, style[type]])}>
             <div className={style.children}>
-                {children}
+                {media ? <RenderMedia/> : children}
             </div>
             <div className={style.information}>
                 <div className={style.time}>13:45</div>
-                { type === "sent" && <div className={style.status}>
+                {type === "sent" && <div className={style.status}>
                     <RenderStatus/>
                 </div>}
             </div>

@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 3;
+
+    .action {
+        display: flex;
+        flex: 1;
+        margin-right: 10px;
+
+        svg {
+            font-size: 50px;
+        }
+    }
+
+    .player {
+        svg {
+            height: 60px;
+            width: 200px;
+            font-size: 25px;
+        }
+    }
+
+}
