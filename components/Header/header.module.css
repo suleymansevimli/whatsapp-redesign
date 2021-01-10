@@ -2,21 +2,58 @@
     background-color: var(--milk-white);
     position: relative;
     display: flex;
+    flex: 1;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 50px 16px 25px 16px;
 
-    svg {
-        cursor: pointer;
-        font-size: 25px;
-        position: absolute;
-        left: 16px;
-        color: var(--gray);
+    .icon {
+        display: flex;
+        align-items: center;
+        svg {
+            display: revert;
+            cursor: pointer;
+            font-size: 25px;
+            //position: absolute;
+            //left: 16px;
+            color: var(--gray);
+        }
+
+        p {
+            font-family: Proximia-Regular;
+            font-size: 16px;
+        }
+
     }
 
+    .avatar {
+        position: relative;
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+        .dot {
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            height: 8px;
+            width: 8px;
+            background: var(--green);
+        }
+    }
+
+
     .header {
-        font-family: Geometria-Regular;
-        font-size: 18px;
-        text-align: center;
+        margin-right: 15px;
+        p{
+            font-family: Proximia-Regular;
+            font-size: 18px;
+            text-align: center;
+        }
     }
 }

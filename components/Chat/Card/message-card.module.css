@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    display: flex;
+    max-width: 275px;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+
+    &.sent {
+        color: var(--white);
+        align-self: flex-end;
+        display: flex;
+        background: var(--green);
+        border-radius: 10px 10px 0 10px;
+    }
+
+    &.received {
+        color: var(--black);
+        align-self: flex-start;
+        display: flex;
+        justify-self: flex-start;
+        background: var(--light-gray);
+        border-radius: 10px 10px 10px 0;
+    }
+
+    .children {
+        padding: 11px;
+    }
+
+    .information {
+        margin: 5px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .time {
+            font-family: Proximia-Light;
+            font-size: 10px;
+            margin-right: 5px;
+        }
+    }
+}

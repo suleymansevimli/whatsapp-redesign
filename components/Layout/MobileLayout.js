@@ -4,17 +4,17 @@ import style from './mobile-layout.module.css'
 import Header from "../Header/Header";
 import TabBar from "../TabBar/TabBar";
 
-const MobileLayout = ({header,headerTitle,children,tabBar,bgImage}) => {
+const MobileLayout = ({header, headerTitle, children, footer, bgImage, headerIcon, backTitle,avatar, backAction}) => {
     return (
-        <div className={style.container} style={bgImage && {"backgroundImage":`url(${bgImage})`}}>
-            {header && <Header title={headerTitle} />}
+        <div className={style.container} style={bgImage && {"backgroundImage": `url(${bgImage})`}}>
+            {header && <Header title={headerTitle} icon={headerIcon} backTitle={backTitle} avatar={avatar} backAction={()=>backAction()}/>}
 
-            <div>
+            <div className={style.children}>
                 {children}
             </div>
 
-            {tabBar && <div className={style.tabBar}>
-                <TabBar/>
+            {footer && <div className={style.tabBar}>
+                {footer}
             </div>}
         </div>
     )
@@ -26,6 +26,6 @@ MobileLayout.propTypes = {
     header: PropTypes.bool,
     headerTitle: PropTypes.string,
     children: PropTypes.any,
-    tabBar: PropTypes.bool,
+    tabBar: PropTypes.node,
     bgImage: PropTypes.string,
 }

@@ -1,13 +1,23 @@
 import React from "react";
 import style from './header.module.css'
 import PropTypes from 'prop-types'
-import {Camera} from "../icons";
 
-const Header = ({title}) => {
+const Header = ({title, icon, backTitle, avatar, backAction}) => {
     return (
         <div className={style.container}>
-            <Camera/>
-            <p className={style.header}>{title}</p>
+            <div className={style.icon} onClick={()=>backAction()}>
+                {icon}
+                <p>{backTitle}</p>
+            </div>
+
+            <div className={style.header}>
+                <p>{title}</p>
+            </div>
+
+           <div className={style.avatar}>
+               {avatar && <> <img src={avatar} alt=""/>
+                <div className={style.dot}/> </> }
+            </div>
         </div>
     )
 }
@@ -15,7 +25,8 @@ const Header = ({title}) => {
 export default Header;
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    backAction: PropTypes.func
 }
 
 Header.defaultProps = {

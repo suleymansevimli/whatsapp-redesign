@@ -1,5 +1,6 @@
 export { default as Accept } from './Accept'
 export { default as Attach } from './Attach'
+export { default as BackArrow } from './BackArrow'
 export { default as Baloon } from './Baloon'
 export { default as Call } from './Call'
 export { default as Camera } from './Camera'
