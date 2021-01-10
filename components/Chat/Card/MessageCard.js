@@ -55,6 +55,6 @@ export default MessageCard;
 
 MessageCard.propTypes = {
     type: PropTypes.oneOf(["received", "sent"]),
-    children: PropTypes.node.isRequired,
-    status: PropTypes.oneOf([""])
+    children: PropTypes.node,
+    status: PropTypes.oneOf(["pending","read","delivered","notDelivered"]),
 }

@@ -15,7 +15,12 @@
     }
 
     .player {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         svg {
+            z-index: 1;
             height: 60px;
             width: 200px;
             font-size: 25px;
