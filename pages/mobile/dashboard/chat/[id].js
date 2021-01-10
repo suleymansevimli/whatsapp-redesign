@@ -22,6 +22,11 @@ const Chat = () => {
                       backAction={()=>backAction()}
                       footer={<Input/>} >
             <div className={style.container}>
+
+                <div className={style.dateTime}>
+                    <span>Today</span>
+                </div>
+
                 <MessageCard type={"sent"} status={"read"}>
                     Başkanım önemli bir durum var.
                 </MessageCard>

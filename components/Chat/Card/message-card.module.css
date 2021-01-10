@@ -4,8 +4,7 @@
     max-width: 350px;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 10px;
-
+    margin-bottom: 12px;
 
     &.sent {
         color: var(--white);

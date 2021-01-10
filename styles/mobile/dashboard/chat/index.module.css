@@ -5,4 +5,18 @@
     flex: 1;
     justify-content: flex-end;
     flex-direction: column;
+
+    .dateTime {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 31px;
+
+        span {
+            text-align: center;
+            background: var(--light-gray);
+            padding: 5px 22px;
+            border-radius: 40px;
+        }
+
+    }
 }
