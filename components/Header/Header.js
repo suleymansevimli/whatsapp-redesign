@@ -2,7 +2,7 @@ import React from "react";
 import style from './header.module.css'
 import PropTypes from 'prop-types'
 
-const Header = ({title, icon, backTitle, avatar, backAction}) => {
+const Header = ({title, icon, backTitle, avatar, backAction,avatarClick}) => {
     return (
         <div className={style.container}>
             <div className={style.icon} onClick={()=>backAction()}>
@@ -14,7 +14,7 @@ const Header = ({title, icon, backTitle, avatar, backAction}) => {
                 <p>{title}</p>
             </div>
 
-           <div className={style.avatar}>
+           <div className={style.avatar} onClick={()=>avatarClick()}>
                {avatar && <> <img src={avatar} alt=""/>
                 <div className={style.dot}/> </> }
             </div>
@@ -29,7 +29,8 @@ Header.propTypes = {
     icon: PropTypes.node,
     backTitle: PropTypes.string,
     avatar: PropTypes.string,
-    backAction: PropTypes.func
+    backAction: PropTypes.func,
+    avatarClick: PropTypes.func
 }
 
 Header.defaultProps = {

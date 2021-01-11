@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import style from './mobile-layout.module.css'
 import Header from "../Header/Header";
 
-const MobileLayout = ({header, headerTitle, children, footer, bgImage, headerIcon, backTitle,avatar, backAction}) => {
+const MobileLayout = ({header, headerTitle, children, footer, bgImage, headerIcon, backTitle,avatar, backAction,avatarClick}) => {
     return (
         <div className={style.container} style={bgImage && {"backgroundImage": `url(${bgImage})`}}>
             {header &&
                 (<div className={style.header}>
-                    <Header title={headerTitle} icon={headerIcon} backTitle={backTitle} avatar={avatar} backAction={()=>backAction()}/>
+                    <Header avatarClick={()=>avatarClick()} title={headerTitle} icon={headerIcon} backTitle={backTitle} avatar={avatar} backAction={()=>backAction()}/>
                 </div>)
             }
 

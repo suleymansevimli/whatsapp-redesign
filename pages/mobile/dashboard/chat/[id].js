@@ -20,6 +20,7 @@ const Chat = () => {
                       headerTitle={"Rahmetli Başkan Kennedy"}
                       avatar={"/img/kennedy.jpg"}
                       backAction={()=>backAction()}
+                      avatarClick={()=>router.push("/mobile/dashboard/chat/friend-profile")}
                       footer={<Input/>} >
             <div className={style.container}>
 

@@ -1,0 +1,143 @@
+.container {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+
+    .profile {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        position: relative;
+
+        img {
+            max-height: 375px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            object-fit: cover;
+        }
+
+        span {
+            background: var(--white);
+            border-radius: 40px;
+            padding: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    }
+
+    .information {
+        z-index: 1;
+        display: flex;
+        margin: -35px 8px 0 8px;
+        flex: 1;
+
+        .card {
+            padding: 16px;
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+
+            .infoCard {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .nameAndNumber {
+                    display: flex;
+                    flex-direction: column;
+
+                    .name {
+                        font-family: Geometria-Medium;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+
+                    .number {
+                        color: var(--dark-gray);
+                        font-family: Geometria-Regular;
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-top: 4px;
+                    }
+                }
+
+                .actions {
+                    display: flex;
+                    svg {
+                        margin-left: 15px;
+                        color: #fff;
+                        font-size: 35px;
+                    }
+                }
+            }
+
+            .statusCard {
+                display: flex;
+                flex-direction: column;
+
+                .header {
+                    p {
+                        font-family: Geometria-Medium;
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-bottom: 8px;
+                    }
+                }
+                .content {
+                    font-family: Proximia-Regular;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: var(--dark-gray);
+                }
+            }
+
+            .messageItemsCard {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .listItem {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    border-bottom: 1px solid var(--light-gray);
+
+                    .listTitle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        span {
+                            margin-left: 14px;
+                            font-family: Geometria-Regular;
+                            font-size: 14px;
+                        }
+
+                        svg {
+                            color: var(--white);
+                            font-size: 35px;
+                        }
+                    }
+
+                    .listArrow {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        span {
+                            color: var(--dark-gray);
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
