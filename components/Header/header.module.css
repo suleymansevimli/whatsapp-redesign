@@ -14,8 +14,6 @@
             display: revert;
             cursor: pointer;
             font-size: 25px;
-            //position: absolute;
-            //left: 16px;
             color: var(--gray);
         }
 

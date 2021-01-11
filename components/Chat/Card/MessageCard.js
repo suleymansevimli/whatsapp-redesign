@@ -4,14 +4,17 @@ import cn from 'classnames'
 import style from './message-card.module.css'
 import {Pending, SingleTick, Tick} from "../../icons";
 import Audio from "../Media/Audio";
+import File from "../Media/File";
 
-const MessageCard = ({type, children, status, media}) => {
+const MessageCard = ({type, children, status, media,fileName}) => {
 
 
     const RenderMedia = () => {
         switch (media) {
             case "audio":
-                return <Audio/>
+                return <Audio/>;
+            case "file":
+                return <File fileName={fileName}/>
         }
     }
 

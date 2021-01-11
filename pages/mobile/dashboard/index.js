@@ -73,7 +73,7 @@ const Dashboard = () => {
     const Render = () => {
         return users.map((e, i) => {
             return (
-                <UserInformation onClick={() => router.push(e.route)}
+                <UserInformation key={i} onClick={() => router.push(e.route)}
                                  type={e.type}
                                  user={e.user}
                                  status={e.status}

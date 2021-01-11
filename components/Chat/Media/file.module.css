@@ -1,0 +1,17 @@
+.container {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    svg {
+        font-size: 50px;
+    }
+
+    p {
+        margin-top: 6px;
+        font-family: Proximia-Regular;
+        font-size: 16px;
+    }
+}

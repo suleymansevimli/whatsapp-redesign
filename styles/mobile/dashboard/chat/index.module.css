@@ -1,4 +1,6 @@
 .container {
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: 15px;
     height: 100%;
     display: flex;

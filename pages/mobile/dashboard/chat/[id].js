@@ -39,6 +39,24 @@ const Chat = () => {
                     type={"sent"}
                     status={"delivered"}
                     media={"audio"} src={"/"}/>
+
+                <MessageCard
+                    type={"sent"}
+                    status={"delivered"}
+                    media={"file"}
+                    fileName={"Report.doc"}
+                    src={"/"}/>
+
+                <MessageCard
+                    type={"received"}
+                    media={"file"}
+                    fileName={"Report-Edit.docx"}
+                    src={"/"}/>
+
+                <MessageCard type={"received"}>
+                    Düzenledim.
+                </MessageCard>
+
             </div>
         </MobileLayout>
     )

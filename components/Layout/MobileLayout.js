@@ -26,6 +26,6 @@ MobileLayout.propTypes = {
     header: PropTypes.bool,
     headerTitle: PropTypes.string,
     children: PropTypes.any,
-    tabBar: PropTypes.node,
+    tabBar: PropTypes.any,
     bgImage: PropTypes.string,
 }
