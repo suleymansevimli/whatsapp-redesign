@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from 'prop-types';
 import style from './mobile-layout.module.css'
 import Header from "../Header/Header";
-import TabBar from "../TabBar/TabBar";
 
 const MobileLayout = ({header, headerTitle, children, footer, bgImage, headerIcon, backTitle,avatar, backAction}) => {
     return (
@@ -29,6 +28,7 @@ export default MobileLayout;
 MobileLayout.propTypes = {
     header: PropTypes.bool,
     headerTitle: PropTypes.string,
+    backAction: PropTypes.func,
     children: PropTypes.any,
     tabBar: PropTypes.any,
     bgImage: PropTypes.string,

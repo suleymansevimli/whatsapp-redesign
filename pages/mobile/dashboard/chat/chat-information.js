@@ -4,8 +4,11 @@ import styles from "../../../../styles/mobile/dashboard/chat/chat-information.mo
 import MobileLayout from "../../../../components/Layout/MobileLayout";
 import {BackArrow, Search} from "../../../../components/icons";
 import MediaTab from "./_tabs/_media";
+import {useRouter} from "next/router";
 
 const ChatInformation = () => {
+
+    const router = useRouter()
 
     const [activeTab,setActiveTab] = useState("media")
 
@@ -55,6 +58,7 @@ const ChatInformation = () => {
 
     return (
         <MobileLayout
+            backAction={()=>router.back()}
             header={true}
             headerTitle={"Rahmetli Başkan Kennedy"}
             headerIcon={<BackArrow/>}
