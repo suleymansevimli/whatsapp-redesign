@@ -5,6 +5,7 @@
     height: 100%;
 
     .header {
+        z-index: 1;
         position: sticky;
         top: 0;
     }

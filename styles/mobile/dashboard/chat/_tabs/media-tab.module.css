@@ -1,0 +1,22 @@
+.container {
+    margin: 16px 16px;
+    display: flex;
+    flex-direction: column;
+
+    .section {
+
+        .date {
+            p {
+                font-family: Proximia-Regular;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .files {
+            display: flex;
+            flex-direction: column;
+            flex: 6;
+        }
+    }
+}

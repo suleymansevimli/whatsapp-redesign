@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    .tabContainer {
+        display: flex;
+
+        .tab {
+            font-family: Geometria-Regular;
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            margin-left: 23px;
+            color: gray;
+
+            &.active {
+                color: var(--green);
+                padding-bottom: 5px;
+                border-bottom: 2px solid var(--green);
+            }
+
+            &.default {
+
+            }
+        }
+    }
+
+    .search {
+        margin: 10px 14px;
+        display: flex;
+        position: relative;
+        background: var(--light-gray);
+        border-radius: 40px;
+        input {
+            font-family: Geometria-Regular;
+            font-size: 14px;
+            padding-left: 10px;
+            height: 35px;
+            width: 100%;
+            background: none;
+        }
+
+        svg {
+            position: absolute;
+            font-size: 19px;
+            top:8px;
+            right: 10px;
+            color: var(--gray);
+        }
+    }
+
+}
