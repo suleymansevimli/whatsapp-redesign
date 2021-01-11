@@ -7,7 +7,11 @@ import TabBar from "../TabBar/TabBar";
 const MobileLayout = ({header, headerTitle, children, footer, bgImage, headerIcon, backTitle,avatar, backAction}) => {
     return (
         <div className={style.container} style={bgImage && {"backgroundImage": `url(${bgImage})`}}>
-            {header && <Header title={headerTitle} icon={headerIcon} backTitle={backTitle} avatar={avatar} backAction={()=>backAction()}/>}
+            {header &&
+                (<div className={style.header}>
+                    <Header title={headerTitle} icon={headerIcon} backTitle={backTitle} avatar={avatar} backAction={()=>backAction()}/>
+                </div>)
+            }
 
             <div className={style.children}>
                 {children}
