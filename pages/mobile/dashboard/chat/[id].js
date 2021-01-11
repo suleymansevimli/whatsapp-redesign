@@ -38,7 +38,8 @@ const Chat = () => {
                 <MessageCard
                     type={"sent"}
                     status={"delivered"}
-                    media={"audio"} src={"/"}/>
+                    media={"audio"}
+                    src={"/audio/audio.mp3"}/>
 
                 <MessageCard
                     type={"sent"}

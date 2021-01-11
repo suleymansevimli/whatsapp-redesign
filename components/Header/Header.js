@@ -26,10 +26,13 @@ export default Header;
 
 Header.propTypes = {
     title: PropTypes.string.isRequired,
+    icon: PropTypes.node,
+    backTitle: PropTypes.string,
+    avatar: PropTypes.string,
     backAction: PropTypes.func
 }
 
 Header.defaultProps = {
-    title: "Call"
+    title: ""
 }
 

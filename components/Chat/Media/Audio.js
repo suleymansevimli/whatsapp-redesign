@@ -1,8 +1,9 @@
 import React, {useRef, useState} from "react";
+import PropTypes from 'prop-types'
 import style from './audio.module.css'
 import {Pause, Play, Player, PlayerTransparent} from "../../icons";
 
-const Audio = () => {
+const Audio = ({src}) => {
 
     const [play, setPlay] = useState(true);
     const [time,setTime] = useState(0);
@@ -22,8 +23,8 @@ const Audio = () => {
 
     const timeUpdate = () => {
         if (player.current.currentTime) {
-            console.log("curtime", parseInt(player.current.currentTime,10))
-            console.log("duration", (player.current.currentTime/player.current.duration))
+            // console.log("curtime", parseInt(player.current.currentTime,10))
+            // console.log("duration", (player.current.currentTime/player.current.duration))
             setTime(parseInt(player.current.currentTime,10))
 
         }
@@ -36,7 +37,7 @@ const Audio = () => {
                 {play ? <Play onClick={() => playSong()}/> : <Pause onClick={() => pauseSong()}/>}
             </div>
             <div className={style.player}>
-                <audio ref={player} src={"/audio/audio.mp3"}/>
+                <audio ref={player} src={src}/>
                 <PlayerTransparent/>
                 <div style={
                     {width:`${(time)}px`,
@@ -52,3 +53,7 @@ const Audio = () => {
 }
 
 export default Audio;
+
+Audio.propTypes = {
+    src: PropTypes.string.isRequired
+}
