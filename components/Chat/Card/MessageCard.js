@@ -6,13 +6,13 @@ import {Pending, SingleTick, Tick} from "../../icons";
 import Audio from "../Media/Audio";
 import File from "../Media/File";
 
-const MessageCard = ({type, children, status, media,fileName}) => {
+const MessageCard = ({type, children, status, media,fileName,src}) => {
 
 
     const RenderMedia = () => {
         switch (media) {
             case "audio":
-                return <Audio/>;
+                return <Audio src={src}/>;
             case "file":
                 return <File fileName={fileName}/>
         }
