@@ -30,6 +30,6 @@ MobileLayout.propTypes = {
     headerTitle: PropTypes.string,
     backAction: PropTypes.func,
     children: PropTypes.any,
-    tabBar: PropTypes.any,
+    footer: PropTypes.any,
     bgImage: PropTypes.string,
 }

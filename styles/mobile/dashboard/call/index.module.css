@@ -1,0 +1,70 @@
+.container {
+    margin: 11px 16px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .item {
+        margin-bottom: 16px;
+        padding-bottom: 11px;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--light-gray);
+
+        .information {
+            display: flex;
+            width: 100%;
+
+            .avatar {
+                margin-right: 14px;
+                img {
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    object-fit: cover;
+                }
+            }
+
+            .nameAndType {
+                display: flex;
+                flex-direction: column;
+
+                .name {
+                    font-family: Geometria-Medium;
+                    font-size: 16px;
+                    font-weight: 700;
+
+                    &.missingCall {
+                        color: var(--red);
+                    }
+                }
+
+                .type {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 5px;
+                    svg {
+                        font-size: 12px;
+                        margin-right: 13px;
+                    }
+                    p {
+                        font-family: Proximia-Regular;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+
+                }
+            }
+        }
+
+        .time {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
