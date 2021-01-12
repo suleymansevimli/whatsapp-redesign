@@ -85,7 +85,7 @@ const Dashboard = () => {
     }
 
     return (
-        <MobileLayout footer={<TabBar/>} header headerTitle={"Messages"} tabBar headerIcon={<Camera/>}>
+        <MobileLayout footer={<TabBar/>} header headerTitle={"Messages"} tabBar headerIcon={<Camera/>} backAction={()=>router.push("/mobile/dashboard/status")}>
             <div className={style.container}>
                 <SwipeableList>
                     <Render/>

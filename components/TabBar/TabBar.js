@@ -7,7 +7,7 @@ const TabBar = () => {
     const tabs = [
         {id: "status", route: "/status", className: "default", icon: <Status/>},
         {id: "call", route: "/call", className: "default", icon: <Call/>},
-        {id: "message", route: "/message", className: style.active, icon: <Baloon/>},
+        {id: "message", route: "", className: style.active, icon: <Baloon/>},
         {id: "settings", route: "/settings", className: "default", icon: <Settings/>}
     ]
 

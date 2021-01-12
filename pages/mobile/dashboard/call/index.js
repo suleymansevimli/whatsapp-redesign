@@ -4,12 +4,16 @@ import style from "../../../../styles/mobile/dashboard/call/index.module.css"
 import MobileLayout from "../../../../components/Layout/MobileLayout";
 import {Camera, Film, Phone} from "../../../../components/icons";
 import TabBar from "../../../../components/TabBar/TabBar";
+import {useRouter} from "next/router";
 
 const CallPage = () => {
+    const router = useRouter();
+
     return (
         <MobileLayout
             header={true}
             headerIcon={<Camera/>}
+            backAction={()=>router.push("/mobile/dashboard/status")}
             headerTitle={"Call"}
             footer={<TabBar/>}>
 

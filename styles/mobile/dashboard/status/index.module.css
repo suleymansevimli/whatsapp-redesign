@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+
+    .camera {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        position: relative;
+
+        img {
+            max-height: 800px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            object-fit: cover;
+        }
+
+        .cancel {
+            svg {
+                color: var(--white);
+                position: absolute;
+                top: 24px;
+                left: 25px;
+                font-size: 25px;
+            }
+        }
+    }
+
+
+    .tabBar {
+        display: flex;
+        flex: 1;
+        align-self: flex-end;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}

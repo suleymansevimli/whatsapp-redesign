@@ -6,7 +6,7 @@ const CameraTabBar = () => {
     return (
         <div className={style.container}>
             <div className={style.lastImage}>
-                <img src={"http://localhost:3000/img/photo.png"} alt="last taken photo"/>
+                <img src={"/img/photo.png"} alt="last taken photo"/>
             </div>
 
             <div className={style.takePhoto}>
