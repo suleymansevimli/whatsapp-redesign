@@ -1,0 +1,56 @@
+.container {
+    min-height: 75px;
+    background: var(--green);
+    padding: 10px 88px 10px 95px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+    place-content: center;
+
+    .user {
+        display: flex;
+
+        .avatar {
+            img {
+                width: 55px;
+                height: 55px;
+                object-fit: cover;
+                border-radius: 50px;
+            }
+        }
+
+        .information {
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--white);
+
+            .name {
+                font-family: Geometria-Medium;
+                font-weight: 100;
+                font-size: 16px;
+            }
+
+            .status {
+                margin-top: 3px;
+                font-family: Proximia-Regular;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        svg {
+            font-size: 22px;
+            color: var(--white);
+            &:first-child {
+                margin-right: 40px;
+            }
+        }
+    }
+}
