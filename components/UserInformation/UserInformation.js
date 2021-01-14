@@ -50,11 +50,11 @@ const UserInformation = ({user, lastMessage, unreadMessageCount, lastMessageTime
 
 
     return (
-        <SwipeableListItem
-            swipeLeft={swipeLeftOptions()}
-            onSwipeEnd={handleSwipeEnd}
-            onSwipeProgress={handleSwipeProgress}
-            onSwipeStart={handleSwipeStart}>
+        // <SwipeableListItem
+        //     swipeLeft={swipeLeftOptions()}
+        //     onSwipeEnd={handleSwipeEnd}
+        //     onSwipeProgress={handleSwipeProgress}
+        //     onSwipeStart={handleSwipeStart}>
 
             <div className={style.container} onClick={()=>onClick()}>
                 <div className={style.information}>
@@ -73,7 +73,6 @@ const UserInformation = ({user, lastMessage, unreadMessageCount, lastMessageTime
 
             </div>
 
-        </SwipeableListItem>
 
     )
 }

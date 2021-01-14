@@ -3,11 +3,17 @@
     background: var(--green);
     padding: 10px 88px 10px 95px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(391px, 1fr));
     place-content: center;
+
+    .grid {
+        display: flex;
+        flex: 2;
+    }
 
     .user {
         display: flex;
+        flex: 4;
 
         .avatar {
             img {
@@ -41,6 +47,7 @@
 
     .actions {
         display: flex;
+        flex: 1;
         justify-content: flex-end;
         align-items: center;
 
@@ -48,6 +55,7 @@
         svg {
             font-size: 22px;
             color: var(--white);
+
             &:first-child {
                 margin-right: 40px;
             }

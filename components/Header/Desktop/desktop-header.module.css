@@ -1,7 +1,7 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    flex: 2;
+    //display: flex;
+    //flex-direction: column;
+    //flex: 2;
     min-height: 75px;
     background: var(--green);
     padding: 10px 88px 10px 95px;

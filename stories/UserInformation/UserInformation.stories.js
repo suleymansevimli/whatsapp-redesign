@@ -73,7 +73,6 @@ export const SentUserInformationRead = (args) => {
 }
 
 SentUserInformationRead.args = {
-
     user: {
         avatar: "http://localhost:3000/img/avatar.png",
         name: "Joe Doe"
