@@ -11,7 +11,7 @@ const Chat = () => {
     const router = useRouter();
 
     const backAction = () => {
-        return router.back();
+        return router.push("/mobile/dashboard");
     }
 
     return (

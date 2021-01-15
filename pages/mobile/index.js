@@ -66,7 +66,7 @@ const Home = () => {
     }
 
     return (
-        <MobileLayout bgImage={"http://localhost:3000/img/background.png"}>
+        <MobileLayout bgImage={"/img/background.png"}>
             <div className={style.container}>
                 <div className={style.logo}>
                     <img src={"/img/logo.svg"} alt=""/>
