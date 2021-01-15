@@ -92,3 +92,58 @@
         }
     }
 }
+
+.meetingContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 850px;
+    height: 624px;
+    background: none;
+
+    .you {
+        width: 850px;
+        height: 624px;
+        object-fit: cover;
+        box-shadow: 0 0 5px 10px rgba(0,0,0,0.5);
+    }
+
+    .me {
+        position: absolute;
+        bottom: 5px;
+        left: 5px  ;
+    }
+
+    .meetingActions {
+        position: absolute;
+        bottom: 5px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .callActions {
+            svg {
+                margin-right: 15px;
+                font-size: 55px;
+                color: var(--white)
+            }
+        }
+    }
+    .close {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+
+        p {
+            cursor: pointer;
+            font-size: 36px;
+            color: var(--white);
+            transition: 300ms color;
+        }
+
+        p:hover {
+            color: var(--red);
+        }
+    }
+
+}
