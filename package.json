@@ -16,7 +16,8 @@
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-input-mask": "^3.0.0-alpha.2"
+    "react-input-mask": "^3.0.0-alpha.2",
+    "react-modal": "^3.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

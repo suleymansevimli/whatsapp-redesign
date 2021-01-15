@@ -3,7 +3,7 @@ import style from '../../styles/dashboard/index.module.css'
 import cn from "classnames"
 import DesktopHeader from "../../components/Header/Desktop/DesktopHeader";
 import MessageHeader from "../../components/Header/Message/MessageHeader";
-import {Baloon, Call, Status} from "../../components/icons";
+import {AddPerson, Baloon, Call, Status} from "../../components/icons";
 import UserInformation from "../../components/UserInformation/UserInformation";
 import MessageCard from "../../components/Chat/Card/MessageCard";
 import Input from "../../components/Chat/Input/Input";
@@ -118,6 +118,13 @@ const Home = () => {
                     <div className={style.list}>
                         <RenderMessages/>
                     </div>
+
+                    <div className={style.addFriend}>
+                        <p>You`re reached the end. </p>
+                        <p className={style.emphasis} >Add more friends!</p>
+                        <AddPerson/>
+                    </div>
+
                 </div>
                 <div className={style.chat}>
                     <div className={style.messages}>
