@@ -1,0 +1,94 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px !important;
+    width: 303px;
+    height: 457px;
+
+
+    .background {
+        z-index: -1;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(18px);
+        -webkit-filter: blur(18px);
+    }
+
+    .avatar {
+        top: 30%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        position: absolute;
+        object-fit: cover;
+        height: 112px;
+        width: 112px;
+    }
+
+    .actions {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        top: 75%;
+        left: 25%;
+        transform: translate(-25%, -50%);
+        justify-content: space-around;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                border: none;
+                cursor: pointer;
+                color: var(--white);
+                width: 59px;
+                height: 59px;
+                border-radius:50%;
+                transition: 300ms box-shadow;
+            }
+
+            p {
+                margin-top: 12px;
+                font-family: Proximia-Light;
+                font-weight: 400;
+                font-size: 14px;
+                color: var(--white);
+            }
+
+            &.accept {
+                svg:hover {
+                    box-shadow: 0 0 15px 8px rgba(30, 190, 113, 0.8);
+                }
+            }
+
+            &.decline {
+                svg:hover {
+                    box-shadow: 0 0 15px 8px rgba(207, 50, 50, 0.8);
+                }
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+
+        p {
+            cursor: pointer;
+            font-size: 36px;
+            color: var(--white);
+            transition: 300ms color;
+        }
+
+        p:hover {
+            color: var(--red);
+        }
+    }
+}

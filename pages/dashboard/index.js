@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import style from '../../styles/dashboard/index.module.css'
 import cn from "classnames"
 import DesktopHeader from "../../components/Header/Desktop/DesktopHeader";
@@ -7,11 +7,13 @@ import {AddPerson, Baloon, Call, Status} from "../../components/icons";
 import UserInformation from "../../components/UserInformation/UserInformation";
 import MessageCard from "../../components/Chat/Card/MessageCard";
 import Input from "../../components/Chat/Input/Input";
+import Modal from "../../components/Modal/Default/Modal";
+import IncomingCall from "../../components/Call/IncomingCall/IncomingCall";
 
 
 const Home = () => {
 
-
+    const [incomingCall,setOpenIncomingCall] = useState(false)
     const users = [
         {
             user: {
@@ -112,7 +114,7 @@ const Home = () => {
                             <input type="checkbox"/>
                             <span className={cn(style.slider)}/>
                         </label>
-                        <span className={style.label}>Unread Only</span>
+                        <span className={style.label} onClick={()=>setOpenIncomingCall(true)}>Unread Only</span>
                     </div>
 
                     <div className={style.list}>
@@ -161,6 +163,14 @@ const Home = () => {
                     </div>
                     <Input/>
                 </div>
+                <Modal open={false}
+                       closeModal={()=>setOpenIncomingCall(!incomingCall)}>
+                    <div >
+                        adasdasd
+                    </div>
+                </Modal>
+
+                <IncomingCall open={incomingCall} close={()=>setOpenIncomingCall(!incomingCall)}/>
             </div>
         </div>
     )

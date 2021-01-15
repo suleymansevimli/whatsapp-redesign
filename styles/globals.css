@@ -1,58 +1,70 @@
 @font-face {
-  font-family: Proximia-Regular;
-  src: url("./fonts/proxima/ProximaNova-Regular.ttf");
+    font-family: Proximia-Regular;
+    src: url("./fonts/proxima/ProximaNova-Regular.ttf");
 }
 
 @font-face {
-  font-family: Proximia-Light;
-  src: url("./fonts/proxima/ProximaNova-Light.ttf");
+    font-family: Proximia-Light;
+    src: url("./fonts/proxima/ProximaNova-Light.ttf");
 }
 
 @font-face {
-  font-family: Proximia-SBold;
-  src: url("./fonts/proxima/ProximaNova-Semibold.ttf");
+    font-family: Proximia-SBold;
+    src: url("./fonts/proxima/ProximaNova-Semibold.ttf");
 }
 
 @font-face {
-  font-family: Geometria-Regular;
-  src: url("./fonts/geometria/Geometria.ttf");
+    font-family: Geometria-Regular;
+    src: url("./fonts/geometria/Geometria.ttf");
 }
 
 @font-face {
-  font-family: Geometria-Bold;
-  src: url("./fonts/geometria/Geometria-Bold.ttf");
+    font-family: Geometria-Bold;
+    src: url("./fonts/geometria/Geometria-Bold.ttf");
 }
 
 @font-face {
-  font-family: Geometria-Medium;
-  src: url("./fonts/geometria/Geometria-Medium.ttf");
+    font-family: Geometria-Medium;
+    src: url("./fonts/geometria/Geometria-Medium.ttf");
 }
 
 html,
 body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 #__next {
-  height: 100%;
+    height: 100%;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 *:focus {
-  outline: none;
+    outline: none;
+}
+
+
+.Overlay {
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 111 !important;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
