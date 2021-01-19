@@ -13,7 +13,7 @@ import IncomingCall from "../../components/Call/IncomingCall/IncomingCall";
 
 const Home = () => {
 
-    const [incomingCall,setOpenIncomingCall] = useState(false)
+    const [incomingCall, setOpenIncomingCall] = useState(false)
     const users = [
         {
             user: {
@@ -92,7 +92,9 @@ const Home = () => {
         <div className={style.container}>
             <DesktopHeader userAvatar={"/img/avatar.png"} userName={"Süleyman Sevimli"}
                            searchPlaceholder={"Search Messages"}/>
-            <MessageHeader/>
+            <MessageHeader avatar={"http://localhost:3000/img/kennedy.jpg"}
+                           name={"Rahmetli Başkan Kennedy"}
+                           status={"online"}/>
             <div className={style.content}>
                 <div className={style.menu}>
                     <div className={style.menuItem}>
@@ -114,7 +116,7 @@ const Home = () => {
                             <input type="checkbox"/>
                             <span className={cn(style.slider)}/>
                         </label>
-                        <span className={style.label} onClick={()=>setOpenIncomingCall(true)}>Unread Only</span>
+                        <span className={style.label} onClick={() => setOpenIncomingCall(true)}>Unread Only</span>
                     </div>
 
                     <div className={style.list}>
@@ -123,7 +125,7 @@ const Home = () => {
 
                     <div className={style.addFriend}>
                         <p>You`re reached the end. </p>
-                        <p className={style.emphasis} >Add more friends!</p>
+                        <p className={style.emphasis}>Add more friends!</p>
                         <AddPerson/>
                     </div>
 
@@ -163,14 +165,8 @@ const Home = () => {
                     </div>
                     <Input/>
                 </div>
-                <Modal open={false}
-                       closeModal={()=>setOpenIncomingCall(!incomingCall)}>
-                    <div >
-                        adasdasd
-                    </div>
-                </Modal>
 
-                <IncomingCall open={incomingCall} close={()=>setOpenIncomingCall(!incomingCall)}/>
+                <IncomingCall open={incomingCall} close={() => setOpenIncomingCall(!incomingCall)}/>
             </div>
         </div>
     )
